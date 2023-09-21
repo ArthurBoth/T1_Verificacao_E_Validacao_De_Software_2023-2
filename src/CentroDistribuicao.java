@@ -117,7 +117,7 @@ public class CentroDistribuicao {
     // 5% de Aditivo, 25% de Álcool e 70% de Gasolina. Truncar para baixo o resultado final.
     // -7 se receber parametro inválido, -14 não atender pela situação e -21 se não tiver combustível suficiente
     public int[] encomendaCombustivel(int qtdade, TIPOPOSTO tipoPosto) {
-        int MAX_QUANTITY = 10000; // obtido através da fórmula abaixo
+        int maxQuantity = 10000; // obtido através da fórmula abaixo
         /*
          * 10000 / 0,7 = 14285 (arredondado para baixo)
          * 2500 / 0,25 = 10000
@@ -136,7 +136,7 @@ public class CentroDistribuicao {
 
         int[] result = new int[4];
 
-        if (qtdade < 0 || qtdade > MAX_QUANTITY){
+        if (qtdade < 0 || qtdade > maxQuantity){
             result[0] = -7;
             return result;
         }
